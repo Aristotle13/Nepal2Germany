@@ -36,10 +36,20 @@ export default function RequirementsPage() {
               </CardHeader>
               <CardContent className="space-y-4 text-muted-foreground">
                 <p><strong>Bachelor's Degree:</strong> You must hold a relevant bachelor's degree from a recognized university. A four-year degree is generally preferred, but three-year degrees may be accepted if they are equivalent to 180 ECTS credits.</p>
-                <p><strong>Academic Performance (GPA):</strong> While specific requirements vary, a strong academic record is crucial. A GPA of 2.5 (German system) or better is often recommended. For Nepal, this typically translates to a high percentage (e.g., >60-70%).</p>
-                <p><strong>APS Certificate:</strong> Students with academic qualifications from Nepal require an APS (Akademische Prüfstelle) certificate, which verifies the authenticity of your educational documents.</p>
+                <p><strong>Academic Performance (GPA):</strong> While specific requirements vary, a strong academic record is crucial. A GPA of 2.5 (German system) or better is often recommended. For Nepal, this typically translates to a high percentage (e.g., >65-70%).</p>
+                <p><strong>APS Certificate:</strong> Only for students with academic qualification from India, China or Vietnam.</p>
               </CardContent>
+              {/* <CardHeader>
+            
+                <CardDescription>General academic criteria for bachelor's programs.</CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-4 text-muted-foreground">
+                <p><strong>Higher Secondary Education (+2 / A-Level):</strong> You must have completed 12 years of formal education, such as Nepal’s NEB (+2) or Cambridge A-Levels. Your qualification should be equivalent to the German “Abitur” to be eligible for direct admission. If not, a one-year Studienkolleg (foundation course) may be required.</p>
+                <p><strong>Academic Performance (GPA/Percentage):</strong> A strong academic background is essential. While there’s no universal GPA requirement, public universities typically look for scores above 65–70% in your higher secondary education. For A-Levels, passing at least 3 relevant subjects is usually required.</p>
+                <p><strong>Subject Relevance:</strong> Your high school subjects must align with your intended Bachelor's degree. For example, if you want to study engineering, you should have taken subjects like Mathematics and Physics during +2 or A-Level.</p>
+              </CardContent> */}
             </Card>
+            
           </TabsContent>
           
           <TabsContent value="language" className="mt-6">
@@ -64,7 +74,7 @@ export default function RequirementsPage() {
                     <li><strong>Goethe-Zertifikat:</strong> C1 or C2 level certificate.</li>
                   </ul>
                 </div>
-                <p className="pt-2 text-sm"><strong>Note:</strong> Always check the specific language requirements on the university's official course page, as they can vary significantly.</p>
+                <p className="pt-2 text-sm"><strong>Note:</strong> Always check the specific language requirements on the university's official course page, as they can vary significantly. [I highly recommend going for English-language programs.]</p>
               </CardContent>
             </Card>
           </TabsContent>
@@ -78,15 +88,14 @@ export default function RequirementsPage() {
               <CardContent>
                 <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
                   <li>Completed Application Form (from Uni-Assist or the university portal)</li>
-                  <li>Notarized copies of your Bachelor's Degree Certificate and Transcripts</li>
-                  <li>Notarized copy of your Higher Secondary (+2) Transcript and Certificate</li>
-                  <li>Notarized copy of your SEE/SLC Marksheet and Certificate</li>
+                  <li>Copies of your Bachelor's Degree Certificate and Transcripts</li>
+                  <li>Copy of your Higher Secondary (+2) Transcript and Certificate</li>
+                  <li>Copy of your SEE/SLC Marksheet and Certificate</li>
                   <li>Letter of Motivation / Statement of Purpose (SOP)</li>
                   <li>Curriculum Vitae (CV) in European format (Europass)</li>
                   <li>Letters of Recommendation (LORs), usually two from academic professors</li>
                   <li>Proof of Language Proficiency (IELTS/TOEFL/German certificate)</li>
                   <li>Copy of your Passport</li>
-                  <li>APS Certificate</li>
                   <li>Proof of application fee payment, if applicable</li>
                 </ul>
               </CardContent>

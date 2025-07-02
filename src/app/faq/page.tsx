@@ -14,7 +14,7 @@ const faqs = [
   {
     question: "What is Uni-Assist and do I have to apply through it?",
     answer:
-      "Uni-Assist is a centralized admissions portal for international students in Germany. Many universities use it to pre-check international applications for formal requirements. You need to check the specific application procedure for each university you apply to. Some require you to go through Uni-Assist, while others accept direct applications.",
+      "Uni-Assist is a centralized admissions portal for international students in Germany. Many universities use it to pre-check international applications for formal requirements. You need to check the specific application procedure for each university you apply to. Most universities require you to go through Uni-Assist, while some accept direct applications.",
   },
   {
     question: "What are the most important things to prepare for the German student visa interview?",

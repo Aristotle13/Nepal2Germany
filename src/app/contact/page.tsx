@@ -1,5 +1,6 @@
 "use client"
-
+import instagram from '@/images/contact/instagram.jpg'
+import Image from 'next/image';
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
@@ -19,7 +20,9 @@ import { Instagram, Send } from "lucide-react"
 import { useToast } from "@/hooks/use-toast"
 import { useEffect } from "react"
 import { submitContactForm } from "./actions"
-import { useFormState } from "react-dom"
+import { useActionState } from "react"
+import {  MessageCircleMore } from 'lucide-react';
+
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -36,7 +39,7 @@ const formSchema = z.object({
 export default function ContactPage() {
   const { toast } = useToast()
   
-  const [state, formAction] = useFormState(submitContactForm, {
+  const [state, formAction] = useActionState(submitContactForm, {
     message: "",
     success: false,
   })
@@ -84,7 +87,7 @@ export default function ContactPage() {
             <Card>
                 <CardHeader>
                     <CardTitle className="font-headline flex items-center"><Send className="mr-2 h-6 w-6"/>Send a Message</CardTitle>
-                    <CardDescription>We typically respond within 24-48 hours.</CardDescription>
+                    <CardDescription>We typically respond within 1-6 hours.</CardDescription>
                 </CardHeader>
                 <CardContent>
                     <Form {...form}>
@@ -143,12 +146,18 @@ export default function ContactPage() {
                          <CardDescription>For quick questions and updates, follow us and send a DM!</CardDescription>
                     </CardHeader>
                     <CardContent>
-                        <Image src="https://placehold.co/300x300.png" alt="QR code for Instagram" width={300} height={300} className="mx-auto rounded-lg mb-4" data-ai-hint="QR code instagram"/>
+                        <Image src={instagram} alt="QR code for Instagram" width={300} height={300} className="mx-auto rounded-lg mb-4" data-ai-hint="QR code instagram"/>
                          <Button asChild className="w-full font-semibold">
-                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.instagram.com/nepal2germany/" target="_blank" rel="noopener noreferrer">
                                 Open Instagram
                             </a>
                         </Button>
+                        <Button asChild className="w-full font-semibold mt-2 bg-[#25D366] hover:bg-[#1ebe5b] text-black">
+                        <a href="https://wa.me/+9779827355425" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                          Chat on Whatsapp <MessageCircleMore className="h-5 w-5" />
+                             </a>
+                        </Button>
+                        
                     </CardContent>
                 </Card>
             </div>

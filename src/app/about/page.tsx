@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import about from '@/images/about/about2.png';
+import creator from '@/images/about/creator.png'
 
 export default function AboutPage() {
   return (
@@ -11,7 +13,7 @@ export default function AboutPage() {
               Our Mission
             </h1>
             <p className="text-lg text-muted-foreground">
-              Study Bridge Germany was founded with a single, clear mission: to simplify the complex process for Nepali students dreaming of pursuing a master's degree in Germany. We believe that with the right guidance and resources, every deserving student can successfully navigate their path to a world-class German education.
+              Nepal2Germany was founded with a single, clear mission: to simplify the complex process for Nepali students dreaming of pursuing a master's degree in Germany. We believe that with the right guidance and resources, every deserving student can successfully navigate their path to a world-class German education.
             </p>
             <p className="text-lg text-muted-foreground">
               We provide comprehensive, step-by-step guides, curated resources, and clear information to demystify everything from university applications and document preparation to visa processes and life in Germany. Our goal is to be your most trusted companion on this exciting academic journey.
@@ -19,7 +21,7 @@ export default function AboutPage() {
           </div>
           <div className="flex items-center justify-center">
             <Image
-              src="https://placehold.co/500x500.png"
+              src={about}
               alt="Brandenburg Gate in Berlin"
               width={500}
               height={500}
@@ -33,23 +35,23 @@ export default function AboutPage() {
           <Card className="mx-auto max-w-3xl">
             <CardHeader className="text-center">
               <CardTitle className="font-headline text-3xl font-bold tracking-tighter">
-                Meet the Creator
+                Creation of the page
               </CardTitle>
             </CardHeader>
             <CardContent className="flex flex-col items-center gap-6 text-center md:flex-row md:text-left">
-              <Image
-                src="https://placehold.co/150x150.png"
+              {/* <Image
+                src={creator}
                 alt="Creator's photo"
                 width={150}
                 height={150}
-                className="rounded-full"
+                className="rounded-full w-[150px] h-[150px]"
                 data-ai-hint="portrait professional"
-              />
+              /> */}
               <div className="space-y-4">
                 <p className="text-muted-foreground">
                   "Having gone through the entire process myself, I understand the challenges and uncertainties Nepali students face. I created this platform to share the knowledge I gained and to build a supportive community. My hope is to make your journey to Germany smoother and less stressful, so you can focus on what truly matters: your education and future."
                 </p>
-                <p className="font-semibold text-foreground">— A. Sharma, Founder of Study Bridge Germany</p>
+                {/* <p className="font-semibold text-foreground">— Nishant Nepal</p> */}
               </div>
             </CardContent>
           </Card>

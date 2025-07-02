@@ -1,11 +1,18 @@
-import { GraduationCap } from "lucide-react";
+import Image from 'next/image';
+import logo from '@/images/home/logo.png';
 
 export function Logo() {
   return (
     <div className="flex items-center gap-2">
-      <GraduationCap className="h-7 w-7 text-primary" />
+      <Image
+        src={logo}
+        alt="Nepal2Germany Logo"
+        width={32} // Adjust width as needed
+        height={32} // Adjust height as needed
+        className="rounded-full" // Optional: adds a rounded shape
+      />
       <span className="font-headline text-xl font-bold text-foreground">
-        Study Bridge Germany
+        Nepal2Germany
       </span>
     </div>
   );

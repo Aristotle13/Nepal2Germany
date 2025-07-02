@@ -3,6 +3,9 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight, BookOpenCheck, FileText, ListChecks, School, CheckSquare, HelpCircle } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import logo from '@/images/home/logo.png'
+import second from '@/images/home/second.png'
+//import second3 from '@/images/home/second3.png'
 
 const processSteps = [
   {
@@ -37,7 +40,7 @@ export default function Home() {
               Your Bridge to German Universities
             </h1>
             <p className="text-lg text-muted-foreground md:text-xl">
-              A complete guide for Nepali students aspiring to pursue a master’s degree in Germany. We simplify the path from Nepal to Germany.
+              A complete guide for Nepali students aspiring to pursue a degree in Germany. I'm here to simplify the path from Nepal to Germany.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row sm:justify-center md:justify-start">
               <Button asChild size="lg" className="font-semibold">
@@ -52,10 +55,10 @@ export default function Home() {
           </div>
           <div className="flex justify-center">
             <Image
-              src="https://placehold.co/600x400.png"
+              src={logo}
               alt="Graduation in Germany"
-              width={600}
-              height={400}
+              width={500}
+              height={500}
               className="rounded-xl shadow-lg"
               data-ai-hint="graduation germany"
             />
@@ -93,10 +96,10 @@ export default function Home() {
         <div className="container mx-auto grid grid-cols-1 items-center gap-12 px-4 md:grid-cols-2 md:px-6">
           <div className="flex justify-center">
             <Image
-              src="https://placehold.co/600x400.png"
+              src={second}
               alt="Student preparing documents"
-              width={600}
-              height={400}
+              width={500}
+              height={500}
               className="rounded-xl shadow-lg"
               data-ai-hint="student documents"
             />
@@ -147,7 +150,7 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-6">
           <h2 className="font-headline text-3xl font-bold tracking-tighter text-foreground sm:text-4xl">Ready to Start Your Journey?</h2>
           <p className="mt-4 max-w-xl mx-auto text-lg text-muted-foreground">
-            Explore our detailed guides and resources to take the first step towards your master's degree in Germany.
+            Explore our detailed guides and resources to take the first step towards your study  in Germany.
           </p>
           <div className="mt-8">
             <Button asChild size="lg" className="font-semibold">

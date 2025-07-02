@@ -6,7 +6,7 @@ import { Footer } from '@/components/layout/footer';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'Study Bridge Germany',
+  title: 'Nepal2Germany',
   description: 'Your guide for Nepali students to study for a master’s degree in Germany.',
   keywords: ['Nepal to Germany', 'Study in Germany', 'Masters in Germany', 'Nepali students Germany'],
 };

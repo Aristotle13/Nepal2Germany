@@ -35,7 +35,17 @@ export function Header() {
             >
               {link.label}
             </Link>
+
           ))}
+          <Link
+            href="/blog"
+            className={cn(
+              'transition-colors hover:text-primary',
+              pathname === '/blog' ? 'text-primary' : 'text-foreground/60'
+            )}
+          >
+            Blog
+          </Link>
         </nav>
 
         <div className="flex items-center gap-2">
@@ -68,9 +78,19 @@ export function Header() {
                         pathname === link.href ? 'text-primary' : 'text-foreground'
                       )}
                     >
-                      {link.label}
-                    </Link>
+ {link.label}
+ </Link>
                   ))}
+ <Link
+ href="/blog"
+                      onClick={() => setIsSheetOpen(false)}
+ className={cn(
+ 'text-lg font-medium transition-colors hover:text-primary',
+ pathname === '/blog' ? 'text-primary' : 'text-foreground'
+ )}
+                  >
+ Blog
+                  </Link>
                 </nav>
               </div>
             </SheetContent>

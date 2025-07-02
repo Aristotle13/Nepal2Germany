@@ -51,24 +51,25 @@ export default function ApplicationProcessPage() {
           <div className="absolute left-1/2 top-0 h-full w-0.5 -translate-x-1/2 bg-border" aria-hidden="true"></div>
           <div className="space-y-12">
             {timelineSteps.map((step, index) => (
-              <div key={index} className="grid grid-cols-1 items-start gap-6 md:grid-cols-5">
-                <div className={`flex justify-center md:col-span-2 ${index % 2 === 0 ? 'md:order-last' : ''}`}>
+              <div key={index} className="grid grid-cols-1 items-start gap-6 md:grid-cols-5 relative"> {/* Added relative positioning */}
+                {/* Number circle positioned absolutely */}
+                <div className="absolute left-1/2 top-0 -translate-x-1/2 transform hidden md:flex items-center justify-center z-10"> {/* Absolute positioning, added z-10 */}
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full border-4 border-primary bg-background text-primary"> {/* Adjusted classes */}
+                    <span className="font-bold text-lg">{index + 1}</span> {/* Adjusted text size */}
+                  </div>
+                </div>
+                {/* Card content */}
+                <div className={`flex justify-center md:col-span-2 ${index % 2 === 0 ? 'md:col-start-1' : 'md:col-start-4'}`}> {/* Conditional column start */}
                   <Card className="w-full max-w-md transform-gpu transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl">
                     <CardHeader className="flex flex-row items-center gap-4">
                       {step.icon}
-                      <CardTitle className="font-headline text-xl">{step.title}</CardTitle>
+                      <CardTitle className="font-headline text-xl pt-2">{step.title}</CardTitle> {/* Added pt-2 for slight top padding */}
                     </CardHeader>
                     <CardContent>
-                      <p className="text-muted-foreground">{step.description}</p>
+                      <p className="text-muted-foreground pt-2">{step.description}</p> {/* Added pt-2 */}
                     </CardContent>
                   </Card>
                 </div>
-                <div className="col-span-1 hidden items-center justify-center md:flex">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground">
-                    <span className="font-bold">{index + 1}</span>
-                  </div>
-                </div>
-                <div className="hidden md:col-span-2 md:block"></div>
               </div>
             ))}
           </div>
